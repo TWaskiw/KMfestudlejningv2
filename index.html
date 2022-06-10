@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8" />
+    <title>KMFestudlejning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Rune Lehtonen, Thomas Waskiw" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body onhashchange="pageChange()">
+    <!-- Header, topnav ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <header class="header">
+        <div class="topnav" id="myTopnav">
+            <a href="#hjem"><span>KM</span>Festudlejning</a>
+            <div class="links-right">
+                <a onclick="mobileNav()" href="#fadoel">Fadølsudlejning</a>
+                <a onclick="mobileNav()" href="#softice">Softicemaskine</a>
+                <a onclick="mobileNav()" href="#popcorn">Popcornmaskine</a>
+                <a onclick="mobileNav()" href="#aktiviteter">Aktiviteter</a>
+                <a onclick="mobileNav()" href="#kontakt">Kontakt</a>
+                <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- "Hjem" page ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <section id="hjem" class="page">
+        <!-- Hero -->
+        <div class="hero-image">
+            <div class="hero-text-container">
+                <div class="hero-text" data-aos="fade-up" data-aos-duration="1200">
+                    <h1>Velkommen til <br /><span id="km-color">KM</span>Festudlejning</h1>
+                    <p>- Din lokale udlejer af festartikler i Kolding og omegn</p>
+                </div>
+            </div>
+            <div class="scroll-container" onclick="heroScrollDown()">
+                <div class="scroll"></div>
+            </div>
+        </div>
+        <!-- Intro-text -->
+        <div class="intro-text" data-aos="fade-up" data-aos-duration="800">
+            <h3 class="intro-text-header">Lad os hjælpe med at gøre din fest lidt bedre</h3>
+            <p>
+                Vi udlejer fadølsanlæg og softicemaskine med tilbehør til priser alle kan være med til. Vi
+                leverer som udgangspunkt i Kolding og omegn - bor du længere væk så kontakt os, så finder
+                vi en løsning på det.<br /><br />
+
+                Hos KMfestudlejning går vi ikke på kompromis med kvaliteten, og derfor bliver vores varer
+                nøje rengjort og gennemgået inden udlejning. Vi vil gøre det så nemt for dig som
+                overhovedet muligt, og derfor sørger vi altid for en sikker levering med opsætning, når
+                det passer dig, så du har roen til at gøre dig klar til at feste.
+            </p>
+        </div>
+        <!-- Service -->
+        <section class="category-wrapper">
+            <article class="category-article">
+                <div class="blog-post" data-aos="fade-up" data-aos-duration="800">
+                    <div class="blog-post_img">
+                        <img src="img/logo.png" alt="Logo" />
+                    </div>
+                    <div class="blog-post_info">
+                        <h2 class="blog-post_title">Vi er altid klar til at hjælpe</h2>
+                        <p class="blog-post_text">
+                            Bor du i Kolding eller omegn? Vi leverer og monterer i hele Koldingområdet. Skulle
+                            du løbe ind i problemer eller løbe tør, tager vi også gerne et ekstra smut forbi
+                            dig, så vi sikrer os at i får den bedste oplevelse. Har du nogle spørgsmål er du
+                            også altid velkommen til at ringe eller skrive - Se kontakt for mere info
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <!-- Categories -->
+            <h2 class="tilbyder-header" id="vi-tilbyder" data-aos="fade-up" data-aos-duration="800">
+                Vi kan tilbyde
+            </h2>
+            <!-- Category - Fadølsudlejning -->
+            <article class="category-article" data-aos="fade-up" data-aos-duration="800">
+                <div class="blog-post">
+                    <div class="blog-post_img">
+                        <img src="img/beer2.jpg" alt="Billede af Fadøl" />
+                    </div>
+                    <div class="blog-post_info">
+                        <h2 class="blog-post_title">Fadølsudlejning</h2>
+                        <p class="blog-post_text">
+                            Står du og skal afholde en fødselsdag, firmafest, svendegilde, studentergilde, julefrokost,
+                            bryllup eller en anden festlig begivenhed, så er det et fadølsanlæg du står og mangler.
+                            <br><br>
+                            Når du lejer et fadølsanlæg hos os, vil der altid være friske kolde fadøl, og du slipper for
+                            besværet med at holde dåser eller flasker kolde, samtidig med at oprydningen er nemmere. Vi
+                            sørger nemlig for at anlægget bliver sat korrekt op, og kommer selvfølgelig tilbage og tager
+                            fadølsanlægget ned igen. Vi tager både brudte og ubrudte fustager med, du skal derfor ikke
+                            tænke på andet end at pleje dine tømmermænd.
+                        </p>
+                        <a href="#fadoel" onclick="scrollDown()" class="blog-post_cta_reverse">Lejebetingelser</a>
+                        <a href="#fadoel" class="blog-post_cta">Læs Mere</a>
+                    </div>
+                </div>
+            </article>
+            <!-- Category - Softicemaskine -->
+            <article class="category-article" data-aos="fade-up" data-aos-duration="800">
+                <div class="blog-post">
+                    <div class="blog-post_img">
+                        <img src="img/Softice.jpg" alt="Billede af Softice" />
+                    </div>
+                    <div class="blog-post_info">
+                        <h2 class="blog-post_title">Softicemaskine</h2>
+                        <p class="blog-post_text">
+                            Skal du køles ned i solen? Skal dine børn have den fedeste fødselsdagsfest? Eller skal du
+                            bare bruge lidt blær til når du fylder rundt? Så lej en softice maskine der helt sikkert får
+                            festen op i et andet gear.
+                        </p>
+                        <a href="#softice" onclick="scrollDown()" class="blog-post_cta_reverse">Lejebetingelser</a>
+                        <a href="#softice" class="blog-post_cta">Læs Mere</a>
+                    </div>
+                </div>
+            </article>
+            <!-- Category popcornmaskine -->
+            <article class="category-article" data-aos="fade-up" data-aos-duration="800">
+                <div class="blog-post">
+                    <div class="blog-post_img">
+                        <img src="img/Popcorn.png" alt="Billede af popcornmaskine" />
+                    </div>
+                    <div class="blog-post_info">
+                        <h2 class="blog-post_title">Popcornmaskine</h2>
+                        <p class="blog-post_text">
+                            Lej en popcorn maskine, og giv festen eller hyggeaften et pift med lækre snacks.
+                            I bunden af maskinen er der varme, som gør at dine popcorn nemt holdes varme og friske.
+
+                            Så står du og skal holde filmaften eller komsammen med dine næreste, er den her det perfekte
+                            bud på snacks.
+                        </p>
+                        <a href="#popcorn" onclick="scrollDown()" class="blog-post_cta_reverse">Lejebetingelser</a>
+                        <a href="#popcorn" class="blog-post_cta">Læs Mere</a>
+                    </div>
+                </div>
+            </article>
+            <!-- Category Aktiviteter -->
+            <article class="category-article" data-aos="fade-up" data-aos-duration="800">
+                <div class="blog-post">
+                    <div class="blog-post_img">
+                        <img src="img/aktiviteter.jpg" alt="Billede af sumodragter" />
+                    </div>
+                    <div class="blog-post_info">
+                        <h2 class="blog-post_title">Aktiviteter</h2>
+                        <p class="blog-post_text">
+                            Skal der være masser af gang i din næste fest, så passer vores sumodragter perfekt. Så find
+                            ud af hvem der er den bedste bryder til din fest ved at reservere disse dragter. <br><br> Er
+                            sumodragter ikke dig?, så er det måske et beerpong bord du står og mangler. Et spil beerpong
+                            er en sikker vinder, da dette altid er et socialt og festligt indspark.
+                        </p>
+                        <a href="#aktiviteter" onclick="scrollDown()" class="blog-post_cta_reverse">Lejebetingelser</a>
+                        <a href="#aktiviteter" class="blog-post_cta">Læs Mere</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </section>
+
+    <!-- "Fadølsudlejning" page ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <section id="fadoel" class="page">
+        <h2 class="main-header" data-aos="fade-up" data-aos-duration="800">Fadølsudlejning</h2>
+        <!-- Slideshow container -->
+        <div class="slideshow-container" data-aos="fade-up" data-aos-duration="800">
+            <!-- Slideshow images -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img/Banner1.jpg" alt="Billede af to forskellige øl" style="width: 100%" />
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img/banner2.jpg" alt="billede af fadøl der hældes op" style="width: 100%" />
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img/banner3.jpg" alt="Billede af fodbold i tv og øl" style="width: 100%" />
+            </div>
+
+            <!-- Slideshow next and previous button -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- Slideshow dots -->
+        <div style="text-align: center" data-aos="fade-up" data-aos-duration="800">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <!-- Subheader and text -->
+        <div class="intro-text" data-aos="fade-up" data-aos-duration="800">
+            <h3 class="intro-text-header">Leje af fadølsanlæg</h3>
+            <p>
+                Står du og skal afholde en fødselsdag, firmafest, svendegilde, studentergilde,
+                julefrokost, bryllup eller en anden festlig begivenhed, så er det et fadølsanlæg du står
+                og mangler. Når du lejer et fadølsanlæg hos os, vil der altid være friske kolde fadøl, og
+                du slipper for besværet med at holde dåser eller flasker kolde, samtidig med at
+                oprydningen er nemmere. Vi sørger nemlig for at anlægget bliver sat korrekt op, og kommer
+                selvfølgelig tilbage og tager fadølsanlægget ned igen. Vi tager både brudte og ubrudte
+                fustager med, du skal derfor ikke tænke på andet end at pleje dine tømmermænd.<br /><br />
+            </p>
+            <p>
+                Hos KMfestudlejning går vi op i kvalitet og har derfor nøje udvalgt vores
+                samarbejdspartnere. Vores fadøl leveres af det lokale Sønderjyske bryggeri Fuglsang.
+                Bryggeriet går meget op i udvælgelsen af råvarer samt det gode bryggerhåndværk. For altid
+                at få den bedste oplevelse skal der dog først være nogle ting på plads. Af den årsag har
+                vi derfor opstillet følgende 4. punkter, til at hjælpe dig, så alt spiller som det skal
+                når festen bliver skudt i gang.
+            </p>
+        </div>
+
+        <!-- Lejebetingelser fadølsudlejning -->
+        <div class="accordion-container" id="fadoel-lejebetingelser" data-aos="fade-up" data-aos-duration="800">
+            <button class="accordion">Lejebetingelser</button>
+            <div class="panel">
+                <p>
+                    <span><br />Erstatning:<br /></span> I lejeperioden bærer kunden overfor udlejer det
+                    fulde ansvar for det udlejede udstyr fra udleveringstidspunkt til det er os i hænde
+                    igen. Udstyr der bliver beskadiget/bortkommet under udleje vil blive repareret/anskaffet
+                    for lejers regning. Evt. reklamation skal meldes inden ibrugtagelse.
+                </p>
+                <p>
+                    <span><br />Montering:<br /></span> Selve fadølsanlægget lægges normalt på gulvet og
+                    selve hanen monteres på en bordkant eller evt. medleveret klapbar. Vi fralægger os
+                    ethvert ansvar for mærker/ridser/fugt m.m. Et godt råd er at lægge noget dække under
+                    anlægget, for at skåne gulvet. Vores klapbar tåler ikke vand, og må derfor ikke stå
+                    udenfor hvis det regner.
+                </p>
+                <p>
+                    <span><br />Betalingsbetingelser:<br /></span> Ordren skal betales via bankoverførsel,
+                    senest en uge inden leveringsdato. Ønskes der at betales kontant, aftales der nærmere
+                    ved bestilling.
+                </p>
+                <p>
+                    <span><br />Kulsyre:<br /></span> Ved bestilling af fadøl, følger der automatik kulsyre
+                    med. Der bruges i gennemsnit ca. 250 g. kulsyre pr. fustage. Der kan dog være spild i
+                    visse situationer, derfor følger der 350 g. kulsyre med pr. fustage. Benyttes der mere
+                    kræves et beløb på 15 kr. pr. 100 g. ekstra kulsyre der bliver brugt.
+                </p>
+                <p>
+                    <span><br />Rengøring:<br /></span> Alt udstyr der er leveret fra os er rengjort og klar
+                    til brug. Ved returtagning sørger vi også for at rengøre anlægget.
+                </p>
+                <p>
+                    <span><br />Levering:<br /></span> Vi leverer i hele Kolding og omegn der tages et gebyr
+                    på 2 kr. pr. kørt km med en minimumspris på 50 kr. Ved anden aftale bliver den fulgt.
+                    Kunden er naturligvis også altid velkommen til selv at afhente og bringe varerne retur,
+                    når transportmidlet er egnet dertil - almindeligvis lukket bil eller rengjort trailer
+                    med overdækning.
+                </p>
+                <p>
+                    <span><br />Strøm:<br /></span> Køleanlægget skal tilsluttes 230 V 50 Hz med
+                    jordforbindelse mindst 4 timer før fadølsanlægget skal bruges. Køleren skal tilsluttes
+                    separat stikkontakt og gerne egen lysgruppe.
+                </p>
+                <p>
+                    <span><br />Returtagning:<br /></span> Vi tilbyder at tage ubrudte fustager retur. Det
+                    er dog vigtigt at være opmærksom på, at fustagens hætte ikke må være brudt. Ved
+                    returtagning tages et gebyr på 20 kr. pr. fustage inkl. moms. <br />
+                    <br />Brugte fustager og Co2 flasker skal afleveres tilbage ved lejeperiodens udløb. Ved
+                    bortkomne fustager eller Co2 flasker, skal der betales pant kontant ved afhentning.
+                    Panten på fustagerne er kr. 200,- inkl. moms. Omkostninger for bortkommen Co2 flasken er
+                    kr. 1.000 inkl. moms.
+                </p>
+                <p>
+                    <span><br />Annullering:<br /></span> Skulle I stå i en situation hvor jeres behov for
+                    fadøl er ændret, kan ordren annulleres. Ordren kan afbestilles eller reguleres nedad
+                    indtil 7 dage før ibrugtagning. Ved senere afbestilling betales halvdelen af
+                    ordresummen.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tabs Fadølsudlejning -->
+        <!-- Tabs Container -->
+        <div class="produkter-gennemgang-intro" data-aos="fade-up" data-aos-duration="800">
+            <h3 class="intro-text-header arrangere-h3">Lad os arrangere din
+                perfekte
+                fest</h3>
+            <p>Der er mange ting at huske når et fadølsanlæg skal fungere til festen, men her kan du gennemgå alle de
+                nødvendige ting, så du intet mangler.</p>
+        </div>
+        <div class="tab_container" data-aos="fade-up" data-aos-duration="800">
+            <!-- Tabs Labels -->
+            <input id="tab1" type="radio" name="tabs" checked />
+            <label class="tab-label" for="tab1"><span>1. Haner</span></label>
+
+            <input id="tab2" type="radio" name="tabs" />
+            <label class="tab-label" for="tab2"><span>2. Bar</span></label>
+
+            <input id="tab3" type="radio" name="tabs" />
+            <label class="tab-label" for="tab3"><span>3. Krus</span></label>
+
+            <input id="tab4" type="radio" name="tabs" />
+            <label onclick="filterAll('Vores udvalg')" class="tab-label" for="tab4"><span>4. Fadøl</span></label>
+            <!-- Tab - 1. Haner -->
+            <section id="content1" class="tab-content">
+                <div class="haner-box-container">
+                    <div class="haner-box" id="box1">
+                        <i class="fas fa-faucet-drip"></i>
+                        <h3>1 Hane</h3>
+                        <p>
+                            Fadølsanlæg med 1 hane, passer til jer som skal bruge fustager af den samme slags
+                            øl. Vores fadølsanlæg er driftsikre, og er tilpasset til udlejning. Der medfølger
+                            køleanlæg, hane og spildbakke. Kulsyre følger med fadøllet. OBS. Bar skal
+                            medkøbes<span class="prisliste"><br /><br /><b>Pris:</b><br /><b>1 dag:</b> 150
+                                kr.<br /><b>3 dage:</b>
+                                300
+                                kr.<br /><b>3+ dage:</b> Kontakt os for mere info
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="haner-box" id="box2">
+                        <span><i class="fas fa-faucet-drip"></i><i class="fas fa-faucet-drip"></i></span>
+                        <h3>2 Haner</h3>
+                        <p>
+                            Ideelt til jer som ønsker 2 typer af fadøl. På fadølsanlæg med 2 haner kan der
+                            monteres 2 fadøl af gangen. Der medfølger køleanlæg, hane og spildbakke. Kulsyre
+                            følger med fadøllet. OBS. Bar skal medkøbes
+                            <span class="prisliste"><br /><br /><br /><b>Pris:</b><br /><b>1 dag:</b> 150 kr.<br /><b>3
+                                    dage:</b> 300
+                                kr.<br /><b>3+ dage:</b> Kontakt os for mere info
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Tab - 2. Klapbar -->
+            <section id="content2" class="tab-content">
+                <article class="category-article">
+                    <div class="blog-post blog-post-klapbar">
+                        <div class="blog-post_img">
+                            <img src="img/klapbar.png" alt="Billede af fuglsang klapbar" />
+                        </div>
+                        <div class="blog-post_info">
+                            <h2 class="blog-post_title">
+                                Klapbar<span class="klapbar-mål">
+                                    <br />Højde: 103cm. Bredde 120cm. Dybde 63cm.</span>
+                            </h2>
+                            <p class="blog-post_text">
+                                Skal din fadøl præsenteres på den rigtige måde, vil det være en god ide at have en
+                                bar. Har du ikke en i forvejen, kan du leje en hos KMfestudlejning når du
+                                bestiller fadøl. Baren er nem at opstille og kræver ikke meget plads.
+                                <span class="prisliste"><br /><br /><b>Pris:</b><br /><b>1 dag:</b> 100 kr.<br /><b>3
+                                        dage:</b> 200
+                                    kr.<br /><b>3+ dage:</b> Kontakt os for mere info
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- Tab - 3. Plastikkrus -->
+            <section id="content3" class="tab-content">
+                <article class="category-article">
+                    <div class="blog-post blog-post-klapbar">
+                        <div class="blog-post_img">
+                            <img src="img/fadøl.png" alt="Billede af fuglsang klapbar" />
+                        </div>
+                        <div class="blog-post_info">
+                            <h2 class="blog-post_title">Plastikkrus</h2>
+                            <p class="blog-post_text">
+                                Fadølskrus er en vigtigt ting, når du lejer fadøl. Har du ikke nok selv, kan du
+                                købe engangkrus ved os. Kruset er lavet til, at du nemmere kan skænke en god fadøl
+                                med den rette mængde skum. Kruset er lavet af særlige materialer, der gør, at
+                                øllet ikke skummer så nemt, og du får derfor flere vellykkede fadøl ud af at bruge
+                                de rigtige krus.
+                                <span class="prisliste"><br /><br /><b>Pris:</b><br /><b>50 stk</b> a' 40 cl 85 kr.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- Tab - 4. Fadøl -->
+            <section id="content4" class="tab-content">
+                <div id="myBtnContainer">
+                    <div class="button-wrapper">
+                        <button class="btn menuActive" onclick="filterAll('Vores udvalg')">Vis alle</button>
+                        <button class="btn" onclick="filterByKeyword('Royal')">Royal</button>
+                        <button class="btn" onclick="filterByKeyword('Albani')">Albani</button>
+                        <button class="btn" onclick="filterByKeyword('Ceres')">Ceres</button>
+                        <button class="btn" onclick="filterByKeyword('Odense')">Odense</button>
+                        <button class="btn" onclick="filterByKeyword('Thor')">Thor</button>
+                        <button class="btn" onclick="filterByKeyword('Fuglsang')">Fuglsang</button>
+                        <button class="btn" onclick="filterByKeyword('Heineken')">Heineken</button>
+                        <button class="btn" onclick="filterByKeyword('Edelweiss')">Edelweiss</button>
+                        <button class="btn" onclick="filterByKeyword('Affligem')">Affligem</button>
+                        <button class="btn" onclick="filterByKeyword('Murphys')">Murphys</button>
+                        <button class="btn" onclick="filterByKeyword('Newcastle')">Newcastle</button>
+                    </div>
+                </div>
+                <h3 class="brand-header" id="brand-header"></h3>
+                <div id="filterDiv" class="filterDiv royal"></div>
+            </section>
+        </div>
+    </section>
+
+    <!-- "Softice" page ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <section id="softice" class="page">
+        <h2 class="main-header" data-aos="fade-up" data-aos-duration="800">
+            Softicemaskine udlejning
+        </h2>
+        <article class="category-article" data-aos="fade-up" data-aos-duration="800">
+            <div class="blog-post">
+                <div class="blog-post_img">
+                    <img src="img/Softice.jpg" alt="Billede softicemaskine" />
+                </div>
+                <div class="blog-post_info">
+                    <h2 class="blog-post_title">Softicemaskine</h2>
+                    <p class="blog-post_text">
+                        Skal du køles ned i solen? Skal dine børn have den fedeste fødselsdagsfest? Eller skal
+                        du bare bruge lidt blær til når du fylder rundt? Så lej en softice maskine der helt
+                        sikkert får festen op i et andet gear.<br /><br />
+                        Til softice maskinen medfølger der 7,5 liter softice, svarende til omkring 40-50
+                        portioner. Vælg mellem vanilje og chokolade. <b>Pris:</b> 1.100,- kr. pr. dag.
+                    </p>
+                    <a href="#kontakt" class="blog-post_cta_reverse">Gå til Kontakt</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Lejebetingelser softicemaskine -->
+        <div class="accordion-container" id="softice-lejebetingelser" data-aos="fade-up" data-aos-duration="800">
+            <button class="accordion">Lejebetingelser</button>
+            <div class="panel">
+                <p>
+                    <span><br />Erstatning:<br /></span> I lejeperioden bærer kunden overfor udlejer det
+                    fulde ansvar for det udlejede udstyr fra udleveringstidspunkt til det er os i hænde
+                    igen. Udstyr der bliver beskadiget/bortkommet under udleje vil blive repareret/anskaffet
+                    for lejers regning. Evt. reklamation skal meldes inden ibrugtagelse.
+                </p>
+                <p>
+                    <span><br />Montering:<br /></span>
+                    Selve softicemaskinen placeres normalt på gulvet eller bord. Vi fralægger os ethvert
+                    ansvar for mærker/ridser/fugt m.m. Et godt råd er at lægge noget dække under anlægget,
+                    for at skåne gulvet.
+                </p>
+                <p>
+                    <span><br />Betalingsbetingelser:<br /></span> Ordren skal betales via bankoverførsel,
+                    senest en uge inden leveringsdato. Ønskes der at betales kontant, aftales der nærmere
+                    ved bestilling.
+                </p>
+                <p>
+                    <span><br />Rengøring:<br /></span> Alt udstyr der er leveret fra os er rengjort og klar
+                    til brug. Ved returtagning sørger vi også for at rengøre anlægget.
+                </p>
+                <p>
+                    <span><br />Levering:<br /></span> Vi leverer i hele Kolding og omegn der tages et gebyr
+                    på 2 kr. pr. kørt km med en minimumspris på 50 kr. Ved anden aftale bliver den fulgt.
+                    Kunden er naturligvis også altid velkommen til selv at afhente og bringe varerne retur,
+                    når transportmidlet er egnet dertil - almindeligvis lukket bil eller rengjort trailer
+                    med overdækning.
+                </p>
+                <p>
+                    <span><br />Strøm:<br /></span> Softicemaskinen skal tilsluttes 230 V 50 Hz. Maskinen
+                    skal tilsluttes seperat stikkontakt og gerne egen lysgruppe. Hvis der flyttes på
+                    softicemaskinen skal den mindst stå i 30 min før den tilsluttes igen.
+                </p>
+                <p>
+                    <span><br />Annullering:<br /></span> Skulle I stå i en situation hvor jeres behov for
+                    softice er ændret, kan ordren annulleres. Ordren kan afbestilles eller reguleres nedad
+                    indtil 7 dage før ibrugtagning. Ved senere afbestilling betales halvdelen af ordresummen
+                </p>
+            </div>
+        </div>
+        <!-- tilkøb/krymmel -->
+        <div class="ekstra-box-container" data-aos="fade-up" data-aos-duration="800">
+            <div class="ekstra-box" id="ekstra-box1">
+                <h3>Tilkøb</h3>
+                <p>
+                    3,75 l softice vælg mellem vanilje eller chokolade: 375 kr. <br /><br />
+                    50 stk papbægre a' 140 ml med skeer: 110 kr. <br /><br />
+                    Vaffel: 2 kr. pr stk.
+                </p>
+            </div>
+
+            <div class="ekstra-box" id="ekstra-box2">
+                <h3>Krymmel</h3>
+                <p>
+                    Chokoladepalietter 15 kr. <br /><br />
+                    Oreo topping 15 kr. <br /><br />
+                    Choco rollo 15 kr.<br /><br />
+                    Nøddemix 25 kr.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- "Popcorn" page ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <section id="popcorn" class="page">
+        <h2 class="main-header" data-aos="fade-up" data-aos-duration="800">
+            Popcornmaskine udlejning
+        </h2>
+        <article class="category-article" data-aos="fade-up" data-aos-duration="800">
+            <div class="blog-post">
+                <div class="blog-post_img">
+                    <img src="img/Popcorn.png" alt="Billede af popcornmaskine" />
+                </div>
+                <div class="blog-post_info">
+                    <h2 class="blog-post_title">Popcornmaskine</h2>
+                    <p class="blog-post_text">
+                        Lej en popcorn maskine, og giv festen eller hyggeaften et pift med lækre snacks. I
+                        bunden af maskinen er der varme, som gør at dine popcorn nemt holdes varme og friske.
+                        Prisen er sat så lavt at den kan bruges en almindelig aften til at kunne nydes med
+                        dine nærmeste. Så står du og skal holde filmaften eller komsammen med dine næreste, er
+                        den her det perfekte bud på snacks.<br /><br />
+                        <a href="#kontakt" class="blog-post_cta_reverse">Gå til Kontakt</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Lejebetingelser popcornmaskine -->
+        <div class="accordion-container" id="popcorn-lejebetingelser" data-aos="fade-up" data-aos-duration="800">
+            <button class="accordion">Lejebetingelser</button>
+            <div class="panel">
+                <p>
+                    <span><br />Erstatning:<br /></span> I lejeperioden bærer kunden overfor udlejer det
+                    fulde ansvar for det udlejede udstyr fra udleveringstidspunkt til det er os i hænde
+                    igen. Udstyr der bliver beskadiget/bortkommet under udleje vil blive repareret/anskaffet
+                    for lejers regning. Evt. reklamation skal meldes inden ibrugtagelse.
+                </p>
+                <p>
+                    <span><br />Montering:<br /></span> Popcornmaskinen placeres normalt på gulvet eller
+                    bord. Vi fralægger os ethvert ansvar for mærker/ridser m.m.
+                </p>
+                <p>
+                    <span><br />Betalingsbetingelser:<br /></span> Ordren skal betales via bankoverførsel,
+                    senest en uge inden leveringsdato. Ønskes der at betales kontant, aftales der nærmere
+                    ved bestilling.
+                </p>
+                <p>
+                    <span><br />Rengøring:<br /></span> Alt udstyr der er leveret fra os er rengjort og klar
+                    til brug. Ved returtagning sørger vi også for at rengøre maskinen.
+                </p>
+                <p>
+                    <span><br />Levering:<br /></span> Vi leverer i hele Kolding og omegn der tages et gebyr
+                    på 2 kr. pr. kørt km med en minimumspris på 50 kr. Ved anden aftale bliver den fulgt.
+                    Kunden er naturligvis også altid velkommen til selv at afhente og bringe varerne retur,
+                    når transportmidlet er egnet dertil - almindeligvis lukket bil eller rengjort trailer
+                    med overdækning.
+                </p>
+                <p>
+                    <span><br />Strøm:<br /></span> Popcornmaskinen skal tilsluttes 230 V 50 Hz. Maskinen
+                    skal tilsluttes seperat stikkontakt og gerne egen lysgruppe.
+                </p>
+                <p>
+                    <span><br />Annullering:<br /></span> Skulle I stå i en situation hvor jeres behov for
+                    popcorn er ændret, kan ordren annulleres. Ordren kan afbestilles eller reguleres nedad
+                    indtil 7 dage før ibrugtagning. Ved senere afbestilling betales halvdelen af ordresummen
+                </p>
+            </div>
+        </div>
+
+        <!-- Priser popcorn -->
+        <div class="ekstra-box-container" data-aos="fade-up" data-aos-duration="800">
+            <div class="ekstra-box" id="softice-box1">
+                <h3>Priser</h3>
+                <p>
+                    <b>1 dag</b> Kun 200 kr.<br />(inkl. 10 dl. popcorn, fedt og salt svarende til omkring
+                    10 personer.)<br /><br />
+                    <b>10 dl ekstra</b> popcorn inkl. fedt og salt: 50 kr. <b>50 kræmmerhus:</b> 60 kr.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- "Aktiviteter" page ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <section id="aktiviteter" class="page">
+        <h2 class="main-header" data-aos="fade-up" data-aos-duration="800">Aktiviteter</h2>
+        <article class="category-article" data-aos="fade-up" data-aos-duration="800">
+            <div class="blog-post">
+                <div class="blog-post_img">
+                    <img src="img/Sumodragter.jpg" alt="Billede af sumodragter" />
+                </div>
+                <div class="blog-post_info">
+                    <h2 class="blog-post_title">Sumodragter</h2>
+                    <p class="blog-post_text">
+                        Skal der være masser af gang i din næste fest, så passer vores sumodragter perfekt. Så
+                        find ud af hvem der er den bedste bryder til din fest ved at reservere disse
+                        dragter.<br /><br />
+                        <b>Pris:</b><br />
+                        <b>1 dag:</b> 300 kr.<br />
+                        <b>3 dage:</b> 500 kr.
+                    </p>
+                    <a href="#kontakt" class="blog-post_cta_reverse">Gå til Kontakt</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="category-article" data-aos="fade-up" data-aos-duration="800">
+            <div class="blog-post">
+                <div class="blog-post_img">
+                    <img src="img/Beerpong.jpg" alt="Billede af beerpong-bord" />
+                </div>
+                <div class="blog-post_info">
+                    <h2 class="blog-post_title">Beerpong Bord</h2>
+                    <p class="blog-post_text">
+                        Vil du sikre dig at der kommer gang i din fest, er det et beerpong bord du står og
+                        mangler. Et spil beerpong er en sikker vinder, da dette altid er et socialt og
+                        festligt indspark.<br /><br />
+                        <b>Pris:</b><br />
+                        <b>1 dag:</b> 150 kr. (inkl. 3 bolde og 2 x 12 kopper.)<br />
+                        <b>3 dage:</b> 250 kr. (inkl. 3 bolde og 2 x 12 kopper.)
+                    </p>
+                    <a href="#kontakt" class="blog-post_cta_reverse">Gå til Kontakt</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Lejebetingelser aktiviteter -->
+        <div class="accordion-container" id="aktiviteter-lejebetingelser" data-aos="fade-up" data-aos-duration="800">
+            <button class="accordion">Lejebetingelser</button>
+            <div class="panel">
+                <p>
+                    <span><br />Erstatning:<br /></span> I lejeperioden bærer kunden overfor udlejer det
+                    fulde ansvar for det udlejede udstyr fra udleveringstidspunkt til det er os i hænde
+                    igen. Udstyr der bliver beskadiget/bortkommet under udleje vil blive repareret/anskaffet
+                    for lejers regning. Evt. reklamation skal meldes inden ibrugtagelse.
+                </p>
+                <p>
+                    <span><br />Betalingsbetingelser:<br /></span> Ordren skal betales via bankoverførsel,
+                    senest en uge inden leveringsdato. Ønskes der at betales kontant, aftales der nærmere
+                    ved bestilling.
+                </p>
+                <p>
+                    <span><br />Rengøring:<br /></span> Alt udstyr der er leveret fra os er rengjort og klar
+                    til brug. Ved returtagning sørger vi også for at rengøre anlægget.
+                </p>
+                <p>
+                    <span><br />Levering:<br /></span> Vi leverer i hele Kolding og omegn der tages et gebyr
+                    på 2 kr. pr. kørt km med en minimumspris på 50 kr. Ved anden aftale bliver den fulgt.
+                    Kunden er naturligvis også altid velkommen til selv at afhente og bringe varerne retur,
+                    når transportmidlet er egnet dertil - almindeligvis lukket bil eller rengjort trailer
+                    med overdækning.
+                </p>
+                <p>
+                    <span><br />Annullering:<br /></span> Skulle I stå i en situation hvor i ikke længere
+                    har behov for produktet, kan ordren annulleres. Ordren kan afbestilles eller reguleres
+                    indtil 7 dage før ibrugtagning. Ved senere afbestilling betales halvdelen af ordresummen
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- "Kontakt" page ––––––––––––––––––––––––––––––––––––––––––––––––––-->
+    <section id="kontakt" class="page">
+        <h2 class="main-header" data-aos="fade-up" data-aos-duration="800">Kontaktinformation</h2>
+        <!-- Kontaktoplysninger -->
+        <div class="contact-box-container" data-aos="fade-up" data-aos-duration="800">
+            <div class="contact-box" id="contact-box1">
+                <h3>Kontakt os</h3>
+                <p>
+                    Vil du aflægge en ordre eller har du bare et spørgsmål, er du altid velkommen til at
+                    kontakte os. Du kan ringe til os 24/7 tager vi ikke telefonen, er vi lige optaget og vi
+                    vil ringe tilbage hurtigst muligt.
+                </p>
+            </div>
+
+            <div class="contact-box" id="contact-box2">
+                <p>
+                    <b>Du finder os på:</b><br />
+                    Østergade 17, 2 TH 6000 Kolding<br /><br />
+
+                    <b>Du kan kontakte:</b><br />
+                    Kasper på tlf: 28 91 30 28 eller Michael på tlf: 23 96 81 09<br /><br />
+
+                    <b>Eller via email:</b>
+                    kmfestudlejning@hotmail.com
+                </p>
+            </div>
+        </div>
+        <!-- Kontaktform -->
+        <div class="contact generel-margin" data-aos="fade-up" data-aos-duration="800">
+            <div class="contact-form">
+                <form method="post" action="contact.php" id="contactForm">
+                    <div class="personal-info">
+                        <div class="contact-name">
+                            <div class="first-name">
+                                <label for="fname">Fornavn *</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Fornavn" required />
+                            </div>
+                            <div class="last-name">
+                                <label for="lname">Efternavn</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Efternavn" />
+                            </div>
+                        </div>
+                        <label for="email">Email-adresse *</label>
+                        <input type="text" id="email" name="email" placeholder="Email" required />
+                        <label for="phone">Telefonnr. *</label>
+                        <input type="text" id="phone" name="phone" placeholder="Telefonnummer" required />
+                    </div>
+                    <div class="contact-date">
+                        <div class="start-date">
+                            <label for="startdate">Start dato</label>
+                            <input type="date" id="startdate" name="startdate" />
+                        </div>
+                        <div class="end-date">
+                            <label for="startdate">Slut dato</label>
+                            <input type="date" id="enddate" name="enddate" />
+                        </div>
+                    </div>
+                    <div class="specific-information">
+                        <div class="klapbar">
+                            <label for="klapbar">Klapbar</label>
+                            <select name="klapbar" id="klapbar">
+                                <option value="0">Nej</option>
+                                <option value="1">Ja</option>
+                            </select>
+                        </div>
+                        <div class="krus">
+                            <label for="krus">Antal krus?</label>
+                            <input type="text" id="krus" name="krus" placeholder="Antal krus (valgfri)" />
+                        </div>
+                        <div class="haner">
+                            <label for="haner">Antal haner?</label>
+                            <select name="haner" id="haner">
+                                <option value="0">Ingen</option>
+                                <option value="1">1 Hane</option>
+                                <option value="2">2 Haner</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="contact-message">
+                        <label for="subject">Din besked *</label>
+                        <textarea id="subject" name="subject" placeholder="Skriv din besked her." style="height: 200px"
+                            required></textarea>
+                    </div>
+                    <input type="submit" onclick="contactSuccess()" value="Send besked" id="submitButton" />
+                </form>
+            </div>
+        </div>
+
+        <!-- Google Maps -->
+        <iframe class="google-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2260.4639973735934!2d9.472209716027464!3d55.48943941974035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c9f7a47f258d9%3A0x8b100bc4401d09c5!2s%C3%98stergade%2017%2C%202%20TH%2C%206000%20Kolding!5e0!3m2!1sen!2sdk!4v1652877911523!5m2!1sen!2sdk"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="left-footer">
+            <div class="address">
+                <h2>KMFestudlejning</h2>
+                <p>Østergade 17.2 th <br />6000 Kolding</p>
+                <p>CVR: 41487275</p>
+            </div>
+        </div>
+        <div class="middle-footer">
+            <h2>Kontakt</h2>
+            <div class="contact-info">
+                <p>
+                    +45 23 96 81 09<br /><a href="mailto:kmfestudlejning@hotmail.com">kmfestudlejning@hotmail.com</a>
+                </p>
+            </div>
+        </div>
+        <div class="right-footer">
+            <div class="find-us">
+                <h2>Følg os</h2>
+                <a href="https://www.facebook.com/KMfestudlejning-106379617817899" target="_blank">
+                    <i class="fab fa-facebook fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SPA functionality  -->
+    <script src="js/spa.js"></script>
+    <!-- main js file -->
+    <script src="js/main.js" type="module"></script>
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init();
+
+    </script>
+</body>
+
+</html>
